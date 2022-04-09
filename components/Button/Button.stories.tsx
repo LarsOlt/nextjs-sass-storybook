@@ -1,16 +1,24 @@
 import Button from "./Button";
+import { ComponentStory, Meta } from "@storybook/react";
 
-export default {
+const meta: Meta = {
   title: "Button",
   component: Button,
 };
 
-const Template = (args: any) => <Button {...args}>Button</Button>;
+export default meta;
+
+// FIXME: Templates render as blank page in storybook
+
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = () => Template.bind({});
 
-Primary.args = {
-  version: "primary",
-};
+export const Secondary = () => Template.bind({});
 
-export const Secondary = () => <Button version="secondary">Text</Button>;
+export const Third = () => <Button>Bla</Button>;
+
+Secondary.args = {
+  variant: "secondary",
+  children: "Secondary",
+};
