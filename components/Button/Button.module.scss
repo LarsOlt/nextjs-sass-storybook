@@ -1,0 +1,23 @@
+$base-color: #0070f3;
+
+.button {
+  border-radius: 5px;
+  padding: 1em;
+  cursor: pointer;
+  border: none;
+  transition: all 250ms;
+
+  &.primary {
+    background-color: $base-color;
+    color: white;
+    &:hover {
+      background-color: rgba($base-color, 0.9);
+    }
+  }
+
+  &.secondary {
+    background-color: unset;
+    border: 1px solid $base-color;
+    color: $base-color;
+  }
+}
