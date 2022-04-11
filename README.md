@@ -1,1 +1,1 @@
-Next.js template for creating sites using Typescript, Sass (Scss) and Storybook!
+Next.js template for projects using Typescript, Sass (Scss) and Storybook!
